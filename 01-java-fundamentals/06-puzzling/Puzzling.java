@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Random;
 
 import javax.print.attribute.standard.OrientationRequested;
+import javax.xml.stream.events.Characters;
 
 public class Puzzling {
     // Create an array that contains all 26 letters of the alphabet (this array must
@@ -18,6 +19,7 @@ public class Puzzling {
         }
         return alphabet;
     }
+     
 
     public int SumArr(int[] arr) {
         int sum = 0;
@@ -38,34 +40,6 @@ public class Puzzling {
         }
         return List10;
     }
-    // Create an array with the following values: Nancy, Jinichi, Fujibayashi,
-    // Momochi, Ishikawa. Shuffle the array and print the name of each person. Have
-    // the method also return an array with names that are longer than 5 characters.
-
-    // public String[] shuffleAndLonger5(String[] arr2) {
-        
-    //     String [] arr3 = new String[arr2.length];
-    //     for (int i = 0; i < arr2.length; i++) {
-            
-    //         Random rand1 =new Random();
-    //         int randomIndexSwap =rand1.nextInt(arr2.length);
-    //         String temp =arr2[randomIndexSwap];
-    //         temp =arr2[randomIndexSwap];
-    //         arr2[randomIndexSwap]= arr2[i];
-    //         arr2[i] =temp ;
-
-    //         if(arr2[i].length() > 5){
-                 
-    //              arr3[i]=arr2[i];
-    //            // System.out.println("greater than 5 = " +Arrays.toString(arr3));
-    //         }
-    //     }
-    //     System.out.println("After Shuffle= "+ Arrays.toString(arr2));
-    //     System.out.println("Greater than 5= "+ Arrays.toString(arr3));
-    //     // return arr3;
-    //     return null;
-    
-    // }
 
     // Create an array with the following values: Nancy, Jinichi, Fujibayashi,
     // Momochi, Ishikawa. Shuffle the array and print the name of each person. Have
@@ -74,21 +48,59 @@ public class Puzzling {
         Collections.shuffle(Arrays.asList(array1));
         return array1;
     }
-    public  ArrayList <String> ShuffleAndGreaterThan5 (ArrayList <String> arr3 ){
-        ArrayList<String> gT5 = new ArrayList<String>() ;
+
+    public ArrayList<String> ShuffleAndGreaterThan5(ArrayList<String> arr3) {
+        ArrayList<String> gT5 = new ArrayList<String>();
         for (int i = 0; i < arr3.size(); i++) {
-            if (arr3.get(i).length()>5){
-            gT5.add(arr3.get(i));
+            if (arr3.get(i).length() > 5) {
+                gT5.add(arr3.get(i));
             }
-            
+
         }
-        
+
         return gT5;
     }
 
-    //Generate and return an array with 10 random numbers between 55-100
+    // Generate and return an array with 10 random numbers between 55-100
 
-    // public int random10( int [] arr)
+    public int[] RandomIntArr(int lowbound, int upperbound) {
+        int[] arr = new int[10];
+        int offset = upperbound - lowbound;
+        Random rand2 = new Random();
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rand2.nextInt(offset) + lowbound;
+        }
+        Arrays.sort(arr);
+        return arr;
+
+    }
+
+    // Create a random string that is 5 characters long.
+    public String Str5Char () {
+        // String[] str =new String[10];
+        String atoz ="ABCDEFGHIJKLMNOPQRSTUVWXYZ" ;
+        String randomString ="";
+        int length =5;
+        Random rand = new Random();
+        char [] text = new char[length];
+
+        for (int i = 0; i < length; i++) {
+        text[i]= atoz.charAt(rand.nextInt(atoz.length()));
+        }
+        for (int j = 0; j < text.length; j++) {
+            randomString += text[j];
+        }
+        return randomString;
+    }
+
+    //Generate an array with 10 random strings that are each 5 characters long
+    public String[] Random10Strings (){
+        String[] array = new String[10];
+        Puzzling pz = new Puzzling();
+        for (int i = 0; i < array.length; i++) {
+            array[i]=   pz.Str5Char();          
+        }
+        return array;
+    }
 
 }
-
