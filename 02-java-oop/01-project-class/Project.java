@@ -23,7 +23,13 @@ public class Project {
     // description separated by a colon.
 
     public String elevatorPitch() {
-        return name + " : " + getDescription();
+        if( getName() == null && getDescription() == null){
+            return "No name" + " :  No Description";
+        }
+        if ( getDescription() == null){
+            return getName() + " :  No Description";
+        }
+        return getName() + " : " + getDescription();
         // return this.name+ " : " + this.description;
         // String pitch = String.format("%s: %s", this.name, this.description);
         // return pitch;
