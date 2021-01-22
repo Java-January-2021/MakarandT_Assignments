@@ -9,22 +9,27 @@ public class Project {
 
     // Project with name only
     public Project(String name) {
-        this.name =name;
+        this.name = name;
 
-    }
-    //Create an instance method called elevatorPitch that will return the name and description separated by a colon.
-     elevatorPitch (String name, String description){
-        System.out.println(name +" : "+ description);
     }
 
     // project with name and description
-     Project(String name, String description) {
-        this.name=name;
-        this.description=description;
+    public Project(String name, String description) {
+        this.name = name;
+        this.description = description;
 
     }
+    // Create an instance method called elevatorPitch that will return the name and
+    // description separated by a colon.
 
-     String getName() {
+    public String elevatorPitch() {
+        return name + " : " + getDescription();
+        // return this.name+ " : " + this.description;
+        // String pitch = String.format("%s: %s", this.name, this.description);
+        // return pitch;
+    }
+
+    String getName() {
         return name;
     }
 
@@ -40,5 +45,4 @@ public class Project {
         this.description = description;
     }
 
-    
 }
