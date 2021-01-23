@@ -5,6 +5,7 @@ public class Human {
     public int intelligence=3;
     // Add the health attribute with a default of 100
     public int health =100;
+    static int noOfSamurai = 0; 
 
     // Add the attack(Human) method that reduces the health of the attacked human by
     // the strength of the current human.
