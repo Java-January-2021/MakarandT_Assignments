@@ -9,7 +9,7 @@ public class HumanTest {
         Human samurai = new Human();
         System.out.println(ninja.health);
         wizard.attack(ninja);
-        System.out.println(ninja.health);
+        ninja.displayHealth();
         samurai.attack(ninja);
         // System.out.println("Health = " + ninja.health);
         ninja.displayHealth();
