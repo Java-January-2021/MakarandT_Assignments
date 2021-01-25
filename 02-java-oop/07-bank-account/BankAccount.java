@@ -4,17 +4,17 @@ public class BankAccount {
     // The class should have the following attributes: (string) account number,
     // (double) checking balance, (double) savings balance.
     private String accountNumber;
-    private double checkingBalance;
-    private double savingBalance;
+    private double checkingBalance = 0; // chaneg in cons
+    private double savingBalance = 0;
     public static int countOfaccount;
     public static double allAccountBalance;
-    public double amount;
+    private double amount;
 
     // constructor
     public BankAccount() {
         countOfaccount++;
         this.accountNumber = GenerateAccountNumber();
-       // System.out.println(accountNumber);
+        // System.out.println(accountNumber);
 
     }
 

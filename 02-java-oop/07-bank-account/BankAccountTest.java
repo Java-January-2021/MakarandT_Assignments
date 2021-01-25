@@ -14,28 +14,26 @@ public class BankAccountTest {
         BA1.TABFC();
 
         // new cust 2 BankAccount BA1 = new BankAccount();
-            // new cust 2 BankAccount BA1 = new BankAccount();
-            System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
-            BankAccount newcust2 = new BankAccount();
-    
-            
-            newcust2.Deposit("checking", 80000);
-            newcust2.withdraw("checking", 10000);
-    
-            newcust2.Deposit("saving", 70000);
-            newcust2.withdraw("saving", 5000);
-            System.out.println("Checking balance =" + newcust2.getCheckingBalance());
-            System.out.println("Saving balance = " + newcust2.getSavingBalance());
-            // System.out.println(BA1.getaccountNumber());
-            // System.out.println(getSavingBalance());
-            newcust2.TABFC();
-    
-            newcust2.NumberOfaccounts();
-                 // new cust 2 BankAccount BA1 = new BankAccount();
+        // new cust 2 BankAccount BA1 = new BankAccount();
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+        BankAccount newcust2 = new BankAccount();
+
+        newcust2.Deposit("checking", 80000);
+        newcust2.withdraw("checking", 10000);
+
+        newcust2.Deposit("saving", 70000);
+        newcust2.withdraw("saving", 5000);
+        System.out.println("Checking balance =" + newcust2.getCheckingBalance());
+        System.out.println("Saving balance = " + newcust2.getSavingBalance());
+        // System.out.println(BA1.getaccountNumber());
+        // System.out.println(getSavingBalance());
+        newcust2.TABFC();
+
+        newcust2.NumberOfaccounts();
+        // new cust 2 BankAccount BA1 = new BankAccount();
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
         BankAccount BA3 = new BankAccount();
 
-        
         BA3.Deposit("checking", 1000);
         BA3.withdraw("checking", 80050);
 
@@ -48,8 +46,6 @@ public class BankAccountTest {
         BA3.TABFC();
 
         BA3.NumberOfaccounts();
-
-    
 
     }
 
