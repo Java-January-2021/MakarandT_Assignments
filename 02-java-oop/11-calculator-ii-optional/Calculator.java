@@ -1,6 +1,6 @@
 
 public class Calculator {
-
+    private ArrayList operands;
     private double OperandOne;
     private double OperandTwo;
     private String Operation;

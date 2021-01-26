@@ -10,18 +10,18 @@ public class CalculatorTest {
         System.out.println(cal.getOperandTwo());
         cal.performOperation();
         System.out.println(cal.getResults());
-        performOperation(10.5)
+        cal.performOperation(10.5)
 
-        performOperation("+")
-            
-        performOperation(5.2)
-            
-        performOperation("*")
-            
-        performOperation(10)
-            
+        cal.performOperation("+")
+
+        cal.performOperation(5.2)
+
+        cal.performOperation("*")
+
+        cal.performOperation(10)
+
         performOperation("=")
-            
+
         getResults()
 
     }
