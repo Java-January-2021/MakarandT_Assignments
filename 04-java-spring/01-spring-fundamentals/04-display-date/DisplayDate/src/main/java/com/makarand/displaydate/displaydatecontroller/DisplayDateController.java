@@ -23,7 +23,7 @@ public class DisplayDateController {
 		SimpleDateFormat dateOnly = new SimpleDateFormat(pattern);
 		String dateInput = dateOnly.format(date);
 		viewModel.addAttribute("date", dateInput);
-		return "./date.jsp";
+		return "/date.jsp";
 	}
 
 	@RequestMapping(value = "/time", method = RequestMethod.GET)

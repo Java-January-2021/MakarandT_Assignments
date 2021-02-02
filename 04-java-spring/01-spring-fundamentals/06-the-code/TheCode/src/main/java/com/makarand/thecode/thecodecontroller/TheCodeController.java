@@ -32,5 +32,4 @@ public class TheCodeController {
 		return "code.jsp";
 	}
 
-
 }

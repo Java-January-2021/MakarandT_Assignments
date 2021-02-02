@@ -5,19 +5,30 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Secret Code</title>
+<title>Dojo Survery index</title>
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-	<div class="center">
-		<h1>What is the code?</h1>
-		<form action="/trycode" method="POST">
-			<input type="text" id="lname" name=inputcode><br> <br>
-			<input type="submit" value="Submit">
-		</form>
+	<div class=center>
+		<h1>Submitted Info</h1>
 		<p>
-			<c:out value="${error}" />
+			Name:
+			<c:out value="${name}" />
 		</p>
+		<p>
+			location:
+			<c:out value="${location}" />
+		</p>
+		<p>
+			language:
+			<c:out value="${language}" />
+		</p>
+		<p>
+			comments:
+			<c:out value="${comments}" />
+		</p>
+
+
 
 	</div>
 
