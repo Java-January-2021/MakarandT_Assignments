@@ -20,15 +20,16 @@
 <form:form action="languages/{id}" method="POST" modelAttribute="editModel">
 
 
+<h1>Details for Language #${ language.id }</h1>
+<p>Language: <c:out value="${language.language}" /></p>
+<hr>
+<p>Creator: <c:out value="${language.creator}" /></p>
 
-<p>><c:out value="${languages.language}" /></p>
 <hr>
-<p><c:out value="${languages.creator}" /></p>
+<p>Current Version:<c:out value="${language.version}" /></p>
 <hr>
-<p><c:out value="${languages.version}" /></p>
-<hr>
-<a id="pageLink" href="/languages/edit/${languages.id}">Edit </a>
-<a id="deleteLink" href="/languages/delete/${languages.id}">Delete</a>
+<a id="pageLink" href="/languages/edit/${language.id}">Edit </a>
+<a id="deleteLink" href="/languages/delete/${language.id}">Delete</a>
 
 </form:form>
 </div>

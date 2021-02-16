@@ -31,8 +31,8 @@ public class HomeController {
 	}
 	//Display 
 	@GetMapping("/languages/{id}")
-	public String display(@ModelAttribute("editModel") LanguageModel languagemodel,@PathVariable("id") Long id,Model viewModel) {
-		viewModel.addAttribute("editModel", this.lservice.getSingleLanguageModel(id));
+	public String display(@PathVariable("id") Long id,Model viewModel) {
+		viewModel.addAttribute("language", this.lservice.getSingleLanguageModel(id));
 		System.out.println(this.lservice.getSingleLanguageModel(id).getLanguage());
 		return "display.jsp";
 	}
