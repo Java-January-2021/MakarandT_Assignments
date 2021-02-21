@@ -75,8 +75,10 @@ public class HomeController {
     }
     // After edit post 
     @PostMapping("/languages/edit/{id}")
-    public String updatelanguages(@Valid @ModelAttribute("editModel") LanguageModel languagemodel, BindingResult result,@PathVariable("id") Long id ) {
-        if (result.hasErrors()) {
+    public String updatelanguages(@Valid @ModelAttribute("editModel") LanguageModel languagemodel, BindingResult result,@PathVariable("id") Long id,Model viewModel ) {
+        
+    	if (result.hasErrors()) {
+    		viewModel.addAttribute("editModel", lservice.getSingleLanguageModel(id));
         	System.out.println("this is error");
             return "edit.jsp";
         }else{
